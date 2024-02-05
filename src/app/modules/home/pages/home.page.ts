@@ -8,10 +8,11 @@ import style from "./home.style.scss?inline";
 
 @customElement("home-page")
 export class HomePage extends LithiumElement(style) {
-  private count = signal(0)
+  private count = signal<number>(0)
 
   private _onClick() {
-    this.count.value = this.count.value + 1;
+    this.count.value += 1;
+    this.output('count', this.count.value);
   }
 
   render() {
