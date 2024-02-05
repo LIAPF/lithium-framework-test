@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "baseUrl": "src",
+    "paths": {
+      "@lithium/*": ["./app/config/lithium/*"],
+      "@components/*": ["./app/shared/components/*"],
+      "@modules/*": ["./app/modules/*"]
+    }
+  },
+  "include": ["src"],
+
+}
