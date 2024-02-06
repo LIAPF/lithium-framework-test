@@ -10,6 +10,7 @@
     "paths": {
       "@lithium/*": ["./app/config/lithium/*"],
       "@components/*": ["./app/shared/components/*"],
+      "@core/*": ["./app/core/*"],
       "@modules/*": ["./app/modules/*"]
     }
   },

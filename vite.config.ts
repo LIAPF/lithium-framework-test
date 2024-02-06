@@ -9,6 +9,7 @@ export default defineConfig({
     alias: {
       '@modules': path.resolve(__dirname, './src/app/modules'),
       '@components': path.resolve(__dirname, './src/app/shared/components'),
+      '@core': path.resolve(__dirname, './src/app/core'),
       '@lithium': path.resolve(__dirname, './src/app/config/lithium'),
     },
   },
