@@ -8,13 +8,13 @@ import "@modules/home/home.module";
 @customElement("app-entry")
 export class AppEntry extends LithiumEntry(
   [{ path: "/*", render: () => html`<home-module />` }],
-  { ctx: [{ name: 'flagCtx', ctx: simpleContext, initialValue: false }] }
+  { globalCtx: [{ name: "flagCtx", ctx: simpleContext, initialValue: false }] }
 ) {
   constructor() {
     super();
 
     this.listen("count", (e) => {
-      this.ctxGlobals['flagCtx'].setValue(e.detail > 10);
+      this.ctxGlobals["flagCtx"].setValue(e.detail > 5);
     });
   }
 }

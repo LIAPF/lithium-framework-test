@@ -22,9 +22,12 @@ export class HomePage extends LithiumElement(style) {
 
   render() {
     return html`
-      <app-button @click=${this._onClick}></app-button>
+      <app-button
+        @click=${ this._onClick }
+        text="Click me!"
+      ></app-button>
       <p>The count is ${this.count.value}</p>
-      <p>${ this.flag && 'The cont > 10' }</p>
+      <p>${ this.flag && 'The cont > 5' }</p>
     `;
   }
 }

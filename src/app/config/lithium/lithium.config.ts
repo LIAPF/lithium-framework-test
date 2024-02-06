@@ -37,7 +37,7 @@ export class LithiumModule extends LithiumElement() {}
 
 export const LithiumEntry = (
   routes: RouteConfig[],
-  globalContexts?: { ctx: { name: string; ctx: Context<symbol, unknown>; initialValue: any }[] }
+  globalContexts?: { globalCtx: { name: string; ctx: Context<symbol, unknown>; initialValue: any }[] }
 ) =>
   class extends SignalWatcher(LitElement) {
     private router: Router = new Router(this, routes);
@@ -54,7 +54,7 @@ export const LithiumEntry = (
       super();
       
       if (globalContexts) {
-        globalContexts.ctx.forEach((context) => {
+        globalContexts.globalCtx.forEach((context) => {
           this.ctxGlobals[context.name] = new ContextProvider(this, {
             context: context.ctx ?? null,
             initialValue: context.initialValue ?? null,
