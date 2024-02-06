@@ -5,10 +5,16 @@ import { LithiumModule } from "@lithium/lithium.config";
 
 import './pages/home.page';
 
+const middleware = async (self: any) => {
+  await self._routes.goto('');
+  return true;
+}
+
 @customElement("home-module")
 export class HomeModule extends LithiumModule {
   private _routes = new Routes(this, [
-    { path: '', render: () => html`<home-page />` }
+    { path: '', render: () => html`<home-page />` },
+    { path: 'home', render: () => html`<p>Hola</p>`, enter: () => middleware(this) }
   ]);
 
   render() {
