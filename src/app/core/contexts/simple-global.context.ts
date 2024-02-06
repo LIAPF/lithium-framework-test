@@ -1,3 +1,3 @@
-import {createContext} from '@lit/context';
+import {Context, createContext} from '@lit/context';
 
-export const simpleContext = createContext(Symbol('my-context'));
+export const simpleContext: Context<symbol, unknown> = createContext(Symbol('my-context'));
