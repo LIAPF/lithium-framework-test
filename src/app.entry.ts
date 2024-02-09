@@ -1,11 +1,9 @@
-import { html } from "lit";
-import { customElement } from "lit/decorators.js";
-import { LithiumEntry } from "@lithium/lithium.config";
+import { LithiumEntry, component, html } from "@lithium/libs";
 import { simpleContext } from "@core/contexts/simple-global.context";
 
 import "@modules/home/home.module";
 
-@customElement("app-entry")
+@component("app-entry")
 export class AppEntry extends LithiumEntry(
   [{ path: "/*", render: () => html`<home-module />` }],
   { globalCtx: [{ name: "flagCtx", ctx: simpleContext, initialValue: false }] }

@@ -1,14 +1,12 @@
-import { html } from "lit";
-import { consume } from '@lit/context';
+import { LithiumElement, component, html } from "@lithium/libs";
 import { signal } from '@lit-labs/preact-signals';
-import { customElement } from "lit/decorators.js";
-import { LithiumElement } from "@lithium/lithium.config";
+import { consume } from '@lit/context';
 
 import { simpleContext } from "@core/contexts/simple-global.context";
 import "@components/button/button.component";
 import style from "./home.style.scss?inline";
 
-@customElement("home-page")
+@component("home-page")
 export class HomePage extends LithiumElement(style) {
   private count = signal<number>(0);
 

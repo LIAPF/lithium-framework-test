@@ -1,10 +1,7 @@
-import { html } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { LithiumElement } from '@lithium/lithium.config';
-
+import { LithiumElement, html, component, property } from "@lithium/libs";
 import style from "./button.style.scss?inline";
 
-@customElement("app-button")
+@component("app-button")
 export class AppButton extends LithiumElement(style) {
 
   @property({ type: String })
