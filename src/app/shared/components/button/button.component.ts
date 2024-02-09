@@ -1,4 +1,4 @@
-import { LithiumElement, html, component, property } from "@lithium/libs";
+import { LithiumElement, html, component, property } from "@lithium";
 import style from "./button.style.scss?inline";
 
 @component("app-button")

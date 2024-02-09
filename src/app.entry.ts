@@ -1,4 +1,4 @@
-import { LithiumEntry, component, html } from "@lithium/libs";
+import { LithiumEntry, component, html } from '@lithium';
 import { simpleContext } from "@core/contexts/simple-global.context";
 
 import "@modules/home/home.module";

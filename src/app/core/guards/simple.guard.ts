@@ -1,4 +1,4 @@
-export const simpleGuard = async (self: any) => {
+export const simpleGuard = (self: any) => async () => {
     await self._routes.goto('');
     return false;
 }

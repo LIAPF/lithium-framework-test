@@ -8,7 +8,8 @@
     "useDefineForClassFields": false,
     "baseUrl": "src",
     "paths": {
-      "@lithium/*": ["./app/config/lithium/*"],
+      "@src/*": ["./*"],
+      "@lithium": ["./app/config/main.ts"],
       "@components/*": ["./app/shared/components/*"],
       "@core/*": ["./app/core/*"],
       "@modules/*": ["./app/modules/*"]

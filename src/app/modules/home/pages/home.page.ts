@@ -1,13 +1,12 @@
-import { LithiumElement, component, html } from "@lithium/libs";
+import { LithiumElement, component, html } from '@lithium';
 import { signal } from '@lit-labs/preact-signals';
 import { consume } from '@lit/context';
 
 import { simpleContext } from "@core/contexts/simple-global.context";
 import "@components/button/button.component";
-import style from "./home.style.scss?inline";
 
 @component("home-page")
-export class HomePage extends LithiumElement(style) {
+export class HomePage extends LithiumElement() {
   private count = signal<number>(0);
 
   @consume({ context: simpleContext, subscribe: true })
